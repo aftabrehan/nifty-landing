@@ -12,13 +12,11 @@ import {
 
 import { appearanceReducer } from 'store/appearance'
 
-import { errorTypes, allTypes } from 'store/utils'
+import { errorTypes } from 'store/utils'
 
 const appReducer = combineReducers({
   appearance: appearanceReducer,
 })
-
-// const { CLEAR_STORE } = allTypes
 
 const rootReducer = (state, action) => {
   if (['CLEAR_STORE'].includes(action.type)) {

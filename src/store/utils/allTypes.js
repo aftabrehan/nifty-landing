@@ -1,5 +1,7 @@
 import appearanceTypes from 'store/appearance/types'
 
-export default {
+const allTypes = {
   ...appearanceTypes,
 }
+
+export default allTypes
