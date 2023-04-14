@@ -1,0 +1,54 @@
+@import './mixins.scss';
+@import './animations.scss';
+@import './colors.scss';
+@import './link.scss';
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flexColStart {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCenterCol {
+  @extend .flexCenter;
+  flex-direction: column;
+}
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+.noHeight {
+  height: 0;
+}
+
+.noWidth {
+  width: 0;
+}

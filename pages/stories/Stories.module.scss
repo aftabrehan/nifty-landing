@@ -1,0 +1,21 @@
+@import 'styles/common';
+
+.wrapper {
+  @extend .flexColStart;
+  padding: 1rem 1.5rem;
+}
+
+.modal {
+  @extend .flexCenterCol;
+  padding: 1rem;
+  background-color: $halfWhite;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0.5rem 75px $tBlack;
+  gap: 3rem;
+}
+
+.dialogContent {
+  @extend .flexCenterCol;
+  padding: 1rem 0;
+}

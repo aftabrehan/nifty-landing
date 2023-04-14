@@ -1,0 +1,58 @@
+@import 'styles/common';
+
+.container {
+  background-color: $tHalfWhite;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 0 35px $tBlack;
+}
+
+.smallSize {
+  width: 300px;
+}
+
+.normalSize {
+  width: 450px;
+}
+
+.largeSize {
+  width: 600px;
+}
+
+.header {
+  @extend .flexStart;
+  align-items: center;
+
+  button {
+    all: unset;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    svg {
+      scale: 0.9;
+      transition: scale 0.15s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        filter: drop-shadow(4px 4px 8px $lightRedBoxShadow);
+        scale: 1;
+
+        path {
+          stroke: $lightRed;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.footer {
+  @extend .flexEnd;
+  align-items: center;
+  gap: 1rem;
+}

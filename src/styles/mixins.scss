@@ -1,0 +1,19 @@
+@mixin growUnderline($color: $primaryBlue, $width: 80%) {
+  &::before {
+    content: '';
+    width: $width;
+    height: 5%;
+    position: absolute;
+    bottom: 10%;
+    background-color: $color;
+    scale: 0 1;
+    left: 50%;
+    right: 50%;
+    translate: -50% 0;
+    transition: scale 0.25s ease-in-out;
+  }
+
+  &:hover::before {
+    scale: 1 1;
+  }
+}

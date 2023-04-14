@@ -1,0 +1,14 @@
+@import 'styles/common';
+
+.background {
+  @extend .flexCenter;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  overflow-y: auto;
+}

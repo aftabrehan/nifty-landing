@@ -1,0 +1,145 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blowUp {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    scale: 0;
+  }
+  99% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateFromLeftTop {
+  0% {
+    transform: translateX(-100%) rotate(280deg);
+  }
+  90% {
+    transform: translateX(0) rotate(370deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes rotateFromLeftBottom {
+  0% {
+    transform: translateX(-100%) rotate(-280deg);
+  }
+  90% {
+    transform: translateX(0) rotate(-370deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-360deg);
+  }
+}
+
+@keyframes rotateFromRightTop {
+  0% {
+    transform: translateX(100%) rotate(-280deg);
+  }
+  90% {
+    transform: translateX(0) rotate(-370deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-360deg);
+  }
+}
+
+@keyframes rotateFromRightBottom {
+  0% {
+    transform: translateX(100%) rotate(280deg);
+  }
+  90% {
+    transform: translateX(0) rotate(370deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// classes
+.blowUp {
+  animation: blowUp 0.25s ease-in-out forwards;
+}
+
+.bounce {
+  animation: bounce 0.25s ease-in-out forwards;
+}
+
+.jump {
+  animation: jump 0.25s ease-in-out forwards;
+}
+
+.fallFromTop {
+  animation: fallFromTop 0.25s ease-in-out forwards;
+}
+
+.growFromBottom {
+  animation: growFromBottom 0.25s ease-in-out forwards;
+}
+
+.rotateFromLeftTop {
+  animation: rotateFromLeftTop 0.25s ease-in-out forwards;
+}
+
+.rotateFromLeftBottom {
+  animation: rotateFromLeftBottom 0.25s ease-in-out forwards;
+}
+
+.rotateFromRightTop {
+  animation: rotateFromRightTop 0.25s ease-in-out forwards;
+}
+
+.rotateFromRightBottom {
+  animation: rotateFromRightBottom 0.25s ease-in-out forwards;
+}
+
+.slideFromLeft {
+  animation: slideFromLeft 0.25s ease-in-out forwards;
+}
+
+.slideFromRight {
+  animation: slideFromRight 0.25s ease-in-out forwards;
+}

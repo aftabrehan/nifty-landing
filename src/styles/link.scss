@@ -1,0 +1,33 @@
+@import './mixins.scss';
+
+.link {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  color: $lightGray;
+
+  &:hover {
+    color: $linkHover;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.75;
+    text-decoration: none;
+  }
+}
+
+.primaryLink {
+  color: $primaryBlue;
+
+  &:hover {
+    color: $primaryBlue;
+  }
+}
+
+.secondaryLink {
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}

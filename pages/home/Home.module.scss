@@ -1,0 +1,17 @@
+@import 'styles/common';
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem 4rem;
+  gap: 1rem;
+}
+
+.link {
+  &:hover {
+    color: $primaryBlue;
+    text-decoration: underline;
+  }
+}
