@@ -2,6 +2,7 @@
 @import './animations.scss';
 @import './colors.scss';
 @import './link.scss';
+@import './font.scss';
 
 .flexStart {
   display: flex;
@@ -51,4 +52,10 @@
 
 .noWidth {
   width: 0;
+}
+
+.clearStyles {
+  outline: none;
+  background: none;
+  border: none;
 }
