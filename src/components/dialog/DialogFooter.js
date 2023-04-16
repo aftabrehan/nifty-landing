@@ -19,6 +19,10 @@ const DialogFooter = ({
 )
 
 DialogFooter.propTypes = {
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  size: PropTypes.string,
+  close: PropTypes.func,
   customClass: PropTypes.string,
 }
 

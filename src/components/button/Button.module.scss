@@ -1,11 +1,13 @@
 @import 'styles/common';
 
 .btn {
-  all: unset;
-  padding: 0.25rem 1rem;
+  @extend .clearStyles, .flexCenter;
+  padding: 0.75rem 1.25rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
   border-radius: 8px;
-  color: white;
-  background-color: $primaryBlue;
   cursor: pointer;
 
   &:hover {
@@ -14,5 +16,30 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.primary {
+  color: $white;
+  background: $primaryGradient;
+  box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
+    inset 4px 4px 4px rgba(255, 255, 255, 0.1);
+  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.secondary {
+  padding: calc(0.75rem - 2px) calc(1.25rem - 2px);
+  color: $mutedBlueShade;
+  border: 2px solid $mutedBlueShade;
+  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.link {
+  color: $mutedBlueShade;
+  transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
+
+  &:hover {
+    color: $primaryBlue;
+    text-decoration: underline;
   }
 }
