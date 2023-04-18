@@ -36,6 +36,11 @@
   justify-content: flex-end;
 }
 
+.flexColEnd {
+  @extend .flexEnd;
+  flex-direction: column;
+}
+
 .spaceBetween {
   display: flex;
   justify-content: space-between;

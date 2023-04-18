@@ -1,0 +1,70 @@
+@import 'styles/common';
+
+.header {
+  @extend .spaceBetween;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem 2rem;
+
+  & > div {
+    @extend .flexCenter;
+    gap: 1rem;
+  }
+
+  @media (max-width: 960px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .navLinks {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .navBtns button {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.modal {
+  background-color: $black50;
+}
+
+.mobileNav {
+  height: 100%;
+  padding: 2rem;
+
+  &,
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+}
+
+.navLinksMob a {
+  color: $white;
+  padding: 0.25rem 0;
+}
+
+.navBtnsMob {
+  display: none !important;
+
+  button {
+    color: $white;
+    border-color: $white;
+  }
+
+  @media (max-width: 600px) {
+    display: flex !important;
+  }
+}
