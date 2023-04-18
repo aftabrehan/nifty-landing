@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import Button from 'components/button'
 
 import Logo from 'assets/svg/logo.svg'
+import Hamburger from 'assets/svg/hamburger.svg'
 
 import stl from './Header.module.scss'
 
@@ -16,15 +17,16 @@ const Header = ({ customClass }) => {
         <Logo />
       </div>
 
-      <div>
+      <div className={stl.navLinks}>
         {navLinks.map(label => (
           <Button key={label} label={label} link="/" />
         ))}
       </div>
 
-      <div>
+      <div className={stl.navBtns}>
         <Button label="Contact" variant="secondary" />
         <Button label="My account" />
+        <Hamburger className={stl.hamburger} />
       </div>
     </header>
   )

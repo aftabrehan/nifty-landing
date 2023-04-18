@@ -10,4 +10,25 @@
     @extend .flexCenter;
     gap: 1rem;
   }
+
+  @media (max-width: 960px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .navLinks {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .navBtns button {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
 }
