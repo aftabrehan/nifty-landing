@@ -1,0 +1,13 @@
+@import 'styles/common';
+
+.header {
+  @extend .spaceBetween;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem 2rem;
+
+  & > div {
+    @extend .flexCenter;
+    gap: 1rem;
+  }
+}
