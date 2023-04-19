@@ -3,5 +3,11 @@
 .wrapper {
   @extend .flexColStart;
   width: 100%;
-  margin-top: 78px;
+  min-height: 100vh;
+  padding-top: 78px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.dark {
+  background-color: $darkBg;
 }

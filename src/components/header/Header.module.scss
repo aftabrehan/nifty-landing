@@ -26,10 +26,22 @@
     }
   }
 
-  @media (max-width: 600px) {
-    .navBtns button {
+  @media (max-width: 645px) {
+    .navBtns button:not(:last-of-type) {
       display: none;
     }
+  }
+}
+
+.iconBtn {
+  background: none;
+  box-shadow: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  &:hover {
+    background-color: $veryLightGray;
   }
 }
 
@@ -69,7 +81,13 @@
     border-color: $white;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 645px) {
     display: flex !important;
+  }
+}
+
+.dark {
+  .iconBtn:hover {
+    background-color: $secondaryGray;
   }
 }
