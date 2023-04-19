@@ -5,17 +5,18 @@ import clsx from 'clsx'
 import stl from './Button.module.scss'
 
 const Button = ({
-  label = 'Button',
+  label,
   link,
   target = '_self',
   onClick,
   variant = 'primary',
+  children,
   customClass,
 }) =>
   link ? (
     <Link href={link || ''}>
       <a target={target} className={stl.link}>
-        {label}
+        {children || label}
       </a>
     </Link>
   ) : (
@@ -23,7 +24,7 @@ const Button = ({
       onClick={onClick}
       className={clsx(stl.btn, stl[variant], customClass)}
     >
-      {label}
+      {children || label}
     </button>
   )
 
@@ -32,6 +33,7 @@ Button.propTypes = {
   link: PropTypes.string,
   target: PropTypes.string,
   onClick: PropTypes.func,
+  children: PropTypes.node,
   variant: PropTypes.oneOf(['primary', 'secondary']),
   customClass: PropTypes.string,
 }

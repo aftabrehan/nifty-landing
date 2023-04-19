@@ -1,0 +1,30 @@
+@import 'styles/common';
+
+.para {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  color: $secondaryGray;
+
+  button {
+    display: inline;
+    padding: inherit;
+  }
+}
+
+.small {
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.medium {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.large {
+  font-size: 2rem;
+  font-weight: 600;
+}
