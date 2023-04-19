@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import clsx from 'clsx'
 
 import Button from 'components/button'
 import Para from 'components/para'
 
-import Logo from 'assets/svg/logo.svg'
+import LightLogo from 'assets/svg/logo.svg'
+import DarkLogo from 'assets/svg/darkmode-logo.svg'
 import FacebookIcon from 'assets/svg/facebook.svg'
 import LinkedinIcon from 'assets/svg/linkedin.svg'
 import GithubIcon from 'assets/svg/github.svg'
@@ -14,6 +16,8 @@ import InstagramIcon from 'assets/svg/instagram.svg'
 import stl from './Footer.module.scss'
 
 const Footer = ({ customClass }) => {
+  const { isDark } = useSelector(state => state.appearance)
+
   const navLinks = ['Home', 'Roadmap', 'Discover', 'Community']
   const socialLinks = [
     <FacebookIcon key={1} />,
@@ -24,10 +28,10 @@ const Footer = ({ customClass }) => {
   ]
 
   return (
-    <footer className={clsx(stl.footer, customClass)}>
+    <footer className={clsx(stl.footer, isDark && stl.dark, customClass)}>
       <div className={stl.main}>
         <div className={stl.upperSection}>
-          <Logo />
+          {isDark ? <DarkLogo /> : <LightLogo />}
           <Para size="small">
             Thanks for visiting our NFT landing page! We&apos;re here to share
             the latest in non-fungible tokens. Follow us on social media and

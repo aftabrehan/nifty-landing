@@ -1,4 +1,4 @@
 import types from './types'
 
-export const setTheme = theme => async dispatch =>
-  dispatch({ type: types.SET_THEME, payload: theme })
+export const setTheme = isDark => async dispatch =>
+  dispatch({ type: types.SET_THEME, payload: isDark })

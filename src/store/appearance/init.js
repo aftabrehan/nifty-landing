@@ -1,5 +1,3 @@
-const init = {
-  theme: 'light', // system, light, dark
-}
+const init = { isDark: true }
 
 export default init
