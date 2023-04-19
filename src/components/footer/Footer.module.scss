@@ -1,0 +1,81 @@
+@import 'styles/common';
+
+.footer {
+  @extend .spaceBetween;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  height: 340px;
+  margin: 2rem auto;
+  border: 1px solid $veryLightGray;
+  border-radius: 20px;
+
+  & > div {
+    @extend .spaceBetween;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 33%;
+    padding: 2rem;
+    height: 100%;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid $veryLightGray;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    width: 95%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    border-radius: unset;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: row;
+
+    & > div {
+      width: 100%;
+
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $veryLightGray;
+      }
+    }
+  }
+
+  @media (max-width: 530px) {
+    margin-bottom: 0;
+
+    & > div {
+      padding: 2rem 1rem;
+    }
+  }
+}
+
+.upperSection {
+  @extend .flexColStart;
+  gap: 1.5rem;
+}
+
+.secondaryLinks,
+.socialLinks {
+  @extend .flexStart;
+  gap: 1rem;
+
+  a {
+    padding: 0;
+  }
+}
+
+.socialLinks a:hover svg path {
+  fill: $primaryBlue;
+}
+
+.primaryLinks a {
+  padding: 0;
+  color: $black;
+  font-weight: 500;
+}
