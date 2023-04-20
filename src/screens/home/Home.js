@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 import Header from 'components/header'
 import Footer from 'components/footer'
+import SearchBar from 'components/search-bar'
 
 import stl from './Home.module.scss'
 
@@ -13,6 +14,8 @@ const Home = () => {
     <div className={clsx(stl.wrapper, isDark && stl.dark)}>
       <Header />
       <Footer />
+
+      <SearchBar />
     </div>
   )
 }
