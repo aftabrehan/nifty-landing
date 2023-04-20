@@ -1,0 +1,96 @@
+@import 'styles/common';
+
+.container {
+  @extend .spaceBetween;
+  max-width: 640px;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: $white;
+  box-shadow: 0px 12px 45px $tBlack;
+  position: relative;
+}
+
+.inputBox {
+  width: 60%;
+
+  input {
+    @extend .clearStyles;
+    width: 100%;
+    padding: 0.15rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    color: $black;
+    border-right: 2px solid $veryLightGray;
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder {
+      color: $secondaryGray;
+    }
+  }
+}
+
+.category {
+  @extend .clearStyles, .spaceBetween;
+  gap: 2rem;
+  height: 42px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: $secondaryGray;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    color: $primaryBlue;
+    background-color: $veryPaleBlue;
+
+    svg path {
+      stroke: $primaryBlue;
+      opacity: 1;
+    }
+  }
+}
+
+.iconBox {
+  @extend .clearStyles, .flexCenter;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    color: $primaryBlue;
+    background-color: $veryPaleBlue;
+  }
+}
+
+.dropdown {
+  @extend .flexColStart;
+  position: absolute;
+  top: 90%;
+  left: 60%;
+  width: 200px;
+  padding: 0.25rem;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0px 12px 45px $tBlack;
+
+  &:not(.show) {
+    display: none;
+  }
+
+  & > button {
+    @extend .clearStyles, .flexStart;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $primaryBlue;
+      background-color: $veryPaleBlue;
+    }
+  }
+}
