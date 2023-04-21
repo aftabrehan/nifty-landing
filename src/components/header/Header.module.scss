@@ -33,6 +33,18 @@
   }
 }
 
+.logo {
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.01;
+
+    svg {
+      filter: drop-shadow(0 0 18px $primaryBlue);
+    }
+  }
+}
+
 .iconBtn {
   background: none;
   box-shadow: none;
@@ -89,5 +101,9 @@
 .dark {
   .iconBtn:hover {
     background-color: $secondaryGray;
+  }
+
+  .logo:hover svg {
+    filter: drop-shadow(0 0 18px $secondaryGray);
   }
 }
