@@ -1,0 +1,61 @@
+@import 'styles/common';
+
+.container {
+  @extend .flexCenterCol;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('/assets/png/squares.png'),
+    url('/assets/png/gradient-fade.png'), url('/assets/png/blured-logo.png'),
+    url('/assets/png/circles.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center, bottom, center, center;
+
+  h1 {
+    @extend .flexCenter;
+    font-family: 'Sora';
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 100%;
+  }
+
+  span {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $secondaryGray;
+  }
+}
+
+.dark {
+  background-image: url('/assets/png/squares.png'),
+    url('/assets/png/gradient-fade-dark.png'),
+    url('/assets/png/blured-logo.png'), url('/assets/png/circles-dark.png');
+
+  h1 {
+    color: $white;
+  }
+}
+
+.companiesLogos {
+  @extend .spaceBetween;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 8rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-height: 50vh;
+    background-position: center, center, top, top;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

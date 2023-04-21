@@ -30,14 +30,14 @@
 
 .secondary {
   padding: calc(0.75rem - 2px) calc(1.25rem - 2px);
-  color: $mutedBlueShade;
-  border: 2px solid $mutedBlueShade;
+  color: $secondaryGray;
+  border: 2px solid $secondaryGray;
   transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out,
     background-color 0.15s ease-in-out;
 }
 
 .link {
-  color: $mutedBlueShade;
+  color: $secondaryGray;
   transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out,
     background-color 0.15s ease-in-out;
 
