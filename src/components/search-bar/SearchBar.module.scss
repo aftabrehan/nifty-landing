@@ -76,6 +76,7 @@
   background-color: $white;
   border-radius: 8px;
   box-shadow: 0px 12px 45px $tBlack;
+  z-index: 1;
 
   &:not(.show) {
     display: none;
