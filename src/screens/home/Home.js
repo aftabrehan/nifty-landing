@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import Header from 'components/header'
 import Footer from 'components/footer'
-import SearchBar from 'components/search-bar'
+import Intro from 'components/sections/intro'
 
 import stl from './Home.module.scss'
 
@@ -38,9 +38,8 @@ const Home = () => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Header />
+      <Intro />
       <Footer />
-
-      <SearchBar />
     </div>
   )
 }
