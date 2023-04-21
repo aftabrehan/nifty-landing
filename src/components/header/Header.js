@@ -27,7 +27,7 @@ const Header = ({ customClass }) => {
 
   return (
     <header className={clsx(stl.header, isDark && stl.dark, customClass)}>
-      <div>{isDark ? <DarkLogo /> : <LightLogo />}</div>
+      <div className={stl.logo}>{isDark ? <DarkLogo /> : <LightLogo />}</div>
 
       <div className={stl.navLinks}>
         {navLinks.map(label => (
