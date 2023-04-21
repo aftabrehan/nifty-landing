@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import Button from 'components/button'
 import Para from 'components/para'
+import Field from 'components/field'
 
 import LightLogo from 'assets/svg/logo.svg'
 import DarkLogo from 'assets/svg/darkmode-logo.svg'
@@ -71,7 +72,7 @@ const Footer = ({ customClass }) => {
           space. Don&apos;t miss out - join our community today!
         </Para>
 
-        {/* <Searchbar /> */}
+        <Field />
       </div>
     </footer>
   )
