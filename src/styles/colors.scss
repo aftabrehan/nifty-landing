@@ -5,6 +5,9 @@ $halfWhite: #f9f9f9;
 $lightGray: #666;
 $veryLightGray: #e2e2ed;
 $secondaryGray: #7780a1;
+$paleGrayishBlue: #f2f3f6;
+$lightBlueGray: #bbc0d0;
+$deepBlueGray: #1b1b27;
 
 $darkBg: #060606;
 
@@ -29,3 +32,10 @@ $black50: rgba(0, 0, 0, 0.5);
 $tHalfWhite: rgba(255, 255, 255, 0.5);
 
 $primaryGradient: linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+
+$ctaDarkShade: linear-gradient(
+    188.08deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 93.79%
+  ),
+  #060714;

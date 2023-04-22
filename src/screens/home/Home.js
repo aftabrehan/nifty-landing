@@ -7,6 +7,7 @@ import Footer from 'components/footer'
 import Intro from 'components/sections/intro'
 import Feature from 'components/sections/feature'
 import Countbox from 'components/countbox'
+import CTA from 'components/cta'
 import EthRow from 'components/eth-row'
 import Badge from 'components/badge'
 
@@ -60,6 +61,7 @@ const Home = () => {
         swap
       />
       <Countbox />
+      <CTA />
       <EthRow />
       <Footer />
     </div>
