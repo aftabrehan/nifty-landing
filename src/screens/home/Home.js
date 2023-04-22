@@ -8,6 +8,7 @@ import Intro from 'components/sections/intro'
 import Feature from 'components/sections/feature'
 import Countbox from 'components/countbox'
 import EthRow from 'components/eth-row'
+import Badge from 'components/badge'
 
 import stl from './Home.module.scss'
 
@@ -42,6 +43,8 @@ const Home = () => {
       </Head>
       <Header />
       <Intro />
+      <Badge>3.19 ETH</Badge>
+
       <Feature />
       <Feature
         title={
