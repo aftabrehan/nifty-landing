@@ -99,6 +99,16 @@
   }
 }
 
+@keyframes zigZag {
+  0% {
+    translate: 0 0;
+  }
+
+  100% {
+    translate: -1% 0;
+  }
+}
+
 // classes
 .blowUp {
   animation: blowUp 0.25s ease-in-out forwards;
