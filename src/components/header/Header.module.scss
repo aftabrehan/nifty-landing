@@ -12,7 +12,9 @@
   top: 0;
   z-index: 1;
 
-  & > div {
+  .logo,
+  .navLinks,
+  .navBtns {
     @extend .flexCenter;
     gap: 1rem;
   }
@@ -76,7 +78,9 @@
   padding: 2rem;
 
   &,
-  & > div {
+  .logo,
+  .navLinks,
+  .navBtns {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector, useDispatch } from 'react-redux'
 import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 import Button from 'components/button'
 import Modal from 'components/modal'
@@ -14,6 +15,7 @@ import SunIcon from 'assets/svg/sun.svg'
 import MoonIcon from 'assets/svg/moon.svg'
 
 import { setTheme } from 'store/appearance'
+import { getCommonMotionProps } from 'lib/utils'
 
 import stl from './Header.module.scss'
 
@@ -22,11 +24,17 @@ const Header = ({ customClass }) => {
 
   const dispatch = useDispatch()
   const { isDark } = useSelector(state => state.appearance)
+  const [animation, setAnimation] = useState(false)
+
+  const motionProps = getCommonMotionProps(animation, setAnimation)
 
   const navLinks = ['Home', 'Roadmap', 'Discover', 'Community']
 
   return (
-    <header className={clsx(stl.header, isDark && stl.dark, customClass)}>
+    <motion.header
+      {...motionProps}
+      className={clsx(stl.header, isDark && stl.dark, customClass)}
+    >
       <div className={stl.logo}>{isDark ? <DarkLogo /> : <LightLogo />}</div>
 
       <div className={stl.navLinks}>
@@ -71,7 +79,7 @@ const Header = ({ customClass }) => {
           </div>
         </div>
       </Modal>
-    </header>
+    </motion.header>
   )
 }
 

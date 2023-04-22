@@ -1,13 +1,17 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 import Para from 'components/para'
 import Button from 'components/button'
 
 import ExposureIcon from 'assets/svg/exposure.svg'
 import BrandIcon from 'assets/svg/brand.svg'
+
+import { getCommonMotionProps } from 'lib/utils'
 
 import stl from './Feature.module.scss'
 
@@ -26,6 +30,9 @@ const Feature = ({
   customClass,
 }) => {
   const { isDark } = useSelector(state => state.appearance)
+  const [animation, setAnimation] = useState(false)
+
+  const motionProps = getCommonMotionProps(animation, setAnimation)
 
   return (
     <div
@@ -37,11 +44,22 @@ const Feature = ({
       )}
     >
       <div className={stl.left}>
-        <h1>{title}</h1>
-        <Para>{description}</Para>
+        <motion.div {...motionProps}>
+          <h1>{title}</h1>
+        </motion.div>
+        <motion.div
+          {...motionProps}
+          transition={{ duration: 0.5, delay: 0.15 }}
+        >
+          <Para>{description}</Para>
+        </motion.div>
 
         {showKeyPoints && (
-          <div className={stl.keypoints}>
+          <motion.div
+            {...motionProps}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className={stl.keypoints}
+          >
             <div className={stl.item}>
               <ExposureIcon />
               <h5>Your Exposure</h5>
@@ -52,18 +70,22 @@ const Feature = ({
               <h5>Your Brand</h5>
               <Para size="small">Grow Your Brand</Para>
             </div>
-          </div>
+          </motion.div>
         )}
 
-        <div className={stl.btnBox}>
+        <motion.div
+          {...motionProps}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className={stl.btnBox}
+        >
           <Button label="Get Started" />
           <Button label="Learn More" variant="secondary" />
-        </div>
+        </motion.div>
       </div>
 
-      <div className={stl.right}>
+      <motion.div {...motionProps} className={stl.right}>
         <Image src={src} width={684} height={616} />
-      </div>
+      </motion.div>
     </div>
   )
 }

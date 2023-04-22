@@ -1,23 +1,30 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 import UsersActiveIcon from 'assets/svg/user.svg'
 import ArtworksIcon from 'assets/svg/artwork.svg'
 import PaintPlateIcon from 'assets/svg/paint-plate.svg'
 import WalletIcon from 'assets/svg/wallet.svg'
 
+import { getCommonMotionProps } from 'lib/utils'
+
 import stl from './Countbox.module.scss'
 
 const Countbox = () => {
   const { isDark } = useSelector(state => state.appearance)
+  const [animation, setAnimation] = useState(false)
+
+  const motionProps = getCommonMotionProps(animation, setAnimation)
 
   const Item = ({ icon, value, label }) => (
-    <div className={stl.item}>
+    <motion.div {...motionProps} className={stl.item}>
       {icon}
       <h4>{value}</h4>
       <span>{label}</span>
-    </div>
+    </motion.div>
   )
 
   Item.propTypes = {
