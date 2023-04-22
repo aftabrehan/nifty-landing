@@ -1,0 +1,59 @@
+@import 'styles/common';
+
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 8rem auto;
+  background-color: $paleGrayishBlue;
+  border-radius: 0 20px 20px 20px;
+  position: relative;
+}
+
+.head {
+  @extend .flexStart;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  top: calc(-42px - 0.75rem);
+  width: 370px;
+  height: 42px;
+  padding: 1.75rem;
+  background-color: $paleGrayishBlue;
+  border-radius: 20px 12px 0 0;
+  z-index: 1;
+
+  div {
+    width: 12px;
+    height: 12px;
+    background-color: $lightBlueGray;
+    border-radius: 50%;
+  }
+}
+
+.featureBox {
+  img {
+    width: 996px !important;
+    height: 426px !important;
+  }
+}
+
+.dark {
+  background: $ctaDarkShade;
+
+  .head {
+    background-color: $deepBlueGray;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 0;
+  }
+
+  .head {
+    display: none;
+  }
+}

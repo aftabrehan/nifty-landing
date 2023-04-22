@@ -23,11 +23,19 @@ const Feature = ({
   src = '/assets/png/effortless.png',
   showKeyPoints,
   swap,
+  customClass,
 }) => {
   const { isDark } = useSelector(state => state.appearance)
 
   return (
-    <div className={clsx(stl.container, swap && stl.swap, isDark && stl.dark)}>
+    <div
+      className={clsx(
+        stl.container,
+        swap && stl.swap,
+        isDark && stl.dark,
+        customClass
+      )}
+    >
       <div className={stl.left}>
         <h1>{title}</h1>
         <Para>{description}</Para>
@@ -65,6 +73,7 @@ Feature.propTypes = {
   src: PropTypes.string,
   showKeyPoints: PropTypes.bool,
   swap: PropTypes.bool,
+  customClass: PropTypes.string,
 }
 
 export default Feature
