@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import Intro from 'components/sections/intro'
+import EthRow from 'components/eth-row'
 
 import stl from './Home.module.scss'
 
@@ -39,6 +40,7 @@ const Home = () => {
       </Head>
       <Header />
       <Intro />
+      <EthRow />
       <Footer />
     </div>
   )
