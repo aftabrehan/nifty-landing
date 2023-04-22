@@ -4,6 +4,7 @@
   @extend .flexCenter;
 
   img {
+    width: 110vw !important;
     scale: 1.1;
     animation: zigZag 1s ease-in-out infinite alternate;
   }
@@ -15,6 +16,6 @@
   }
 
   100% {
-    translate: -1% 0;
+    translate: 1% 0;
   }
 }
