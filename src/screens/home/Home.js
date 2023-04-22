@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import Intro from 'components/sections/intro'
+import Feature from 'components/sections/feature'
 import Countbox from 'components/countbox'
 import EthRow from 'components/eth-row'
 
@@ -41,6 +42,20 @@ const Home = () => {
       </Head>
       <Header />
       <Intro />
+      <Feature />
+      <Feature
+        title={
+          <>
+            Market Your
+            <br /> Unique
+            <br /> NFT
+          </>
+        }
+        description="Reach a wider audience and promote your unique NFT with our powerful marketing tools."
+        src="/assets/png/market-nft.png"
+        showKeyPoints
+        swap
+      />
       <Countbox />
       <EthRow />
       <Footer />
