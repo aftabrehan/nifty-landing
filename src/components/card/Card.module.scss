@@ -1,0 +1,115 @@
+@import 'styles/common';
+
+.container {
+  @extend .flexColStart;
+  gap: 1rem;
+  margin: auto; // temp
+  background: transparent;
+}
+
+.medium {
+  width: 468px;
+  background: transparent;
+  height: 768px;
+
+  img {
+    border-radius: 12px;
+  }
+}
+
+.info {
+  @extend .spaceBetween;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+
+  h5 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: $darkNavyBlue;
+    width: 75%;
+  }
+}
+
+.time {
+  @extend .flexCenter;
+  gap: 1rem;
+  padding: 0 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: $secondaryGray;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid $veryLightGray;
+}
+
+.bidding {
+  @extend .spaceBetween;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.peoples {
+  @extend .spaceBetween;
+
+  img {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  span {
+    margin-left: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $secondaryGray;
+  }
+}
+
+.iconBtn {
+  @extend .clearStyles, .flexCenter;
+  width: 28px;
+  height: 34px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: scale 0.15s ease-in-out;
+
+  &:hover {
+    background-color: transparentize($lightRedBoxShadowHover, 0.35);
+    scale: 1.05;
+
+    svg path {
+      stroke: $red;
+    }
+  }
+}
+
+.dark {
+  .time svg path {
+    fill: $secondaryGray;
+  }
+
+  .info h5 {
+    color: $white;
+  }
+
+  .divider {
+    border-color: $secondaryGray;
+  }
+
+  .iconBtn:hover {
+    background-color: $tHalfWhite;
+  }
+}

@@ -1,16 +1,26 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 import Feature from 'components/sections/feature'
+
+import { getCommonMotionProps } from 'lib/utils'
 
 import stl from './CTA.module.scss'
 
 const CTA = ({ customClass }) => {
   const { isDark } = useSelector(state => state.appearance)
+  const [animation, setAnimation] = useState(false)
+
+  const motionProps = getCommonMotionProps(animation, setAnimation)
 
   return (
-    <div className={clsx(stl.container, isDark && stl.dark, customClass)}>
+    <motion.div
+      {...motionProps}
+      className={clsx(stl.container, isDark && stl.dark, customClass)}
+    >
       <div className={stl.head}>
         <div />
         <div />
@@ -28,7 +38,7 @@ const CTA = ({ customClass }) => {
         src={`/assets/png/users${isDark ? '-dark' : ''}.png`}
         customClass={stl.featureBox}
       />
-    </div>
+    </motion.div>
   )
 }
 
