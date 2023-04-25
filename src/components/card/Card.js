@@ -10,7 +10,7 @@ import ClockIcon from 'assets/svg/clock.svg'
 import HeartRedIcon from 'assets/svg/heart-red.svg'
 import HeartOutlineIcon from 'assets/svg/heart-outline.svg'
 
-import { getRandomNumber } from 'lib/utils'
+import { getRandomNumber, getRandomTime } from 'lib/utils'
 
 import stl from './Card.module.scss'
 
@@ -33,6 +33,8 @@ const Card = ({ size = 'medium', customClass }) => {
     setPeoples(getRandomNumber(10, 999))
   }, [])
 
+  const time = getRandomTime()
+
   return (
     <div
       className={clsx(
@@ -51,7 +53,7 @@ const Card = ({ size = 'medium', customClass }) => {
 
       <div className={stl.time}>
         <ClockIcon />
-        22:59 min left
+        {time} min left
       </div>
 
       <div className={stl.divider} />
