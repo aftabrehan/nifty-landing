@@ -18,11 +18,13 @@ const Card = ({ size = 'medium', customClass }) => {
   const { isDark } = useSelector(state => state.appearance)
 
   const [isLiked, setIsLiked] = useState(false)
-  const [images, setImages] = useState([])
+  const [image, setImage] = useState('')
+  const [users, setUsers] = useState([])
   const [peoples, setPeoples] = useState(35)
 
   useEffect(() => {
-    setImages([
+    setImage(`/assets/png/nfts/${getRandomNumber(1, 19)}.png`)
+    setUsers([
       `/assets/png/people/${getRandomNumber()}.png`,
       `/assets/png/people/${getRandomNumber()}.png`,
       `/assets/png/people/${getRandomNumber()}.png`,
@@ -40,11 +42,7 @@ const Card = ({ size = 'medium', customClass }) => {
         customClass
       )}
     >
-      <Image
-        src="/assets/png/image-0.png"
-        width={size === 'medium' ? 468 : 400}
-        height={600}
-      />
+      <Image src={image} width={size === 'medium' ? 468 : 400} height={600} />
 
       <div className={stl.info}>
         <h5>Risk is truly an easy living for a sickly condition.</h5>
@@ -60,7 +58,7 @@ const Card = ({ size = 'medium', customClass }) => {
 
       <div className={stl.bidding}>
         <div className={stl.peoples}>
-          {images.map(src => (
+          {users.map(src => (
             <Image key={src} src={src} width={32} height={32} />
           ))}
           <span>{peoples} people are bidding</span>
