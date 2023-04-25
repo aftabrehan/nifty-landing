@@ -9,3 +9,6 @@ export const generateRandomString = (length = 6) => {
 
   return result
 }
+
+export const getRandomNumber = (min = 0, max = 14) =>
+  Math.floor(Math.random() * max) + min

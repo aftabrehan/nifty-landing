@@ -96,6 +96,12 @@
   }
 }
 
+@media (max-width: 530px) {
+  .dropdown {
+    left: 48%;
+  }
+}
+
 @media (max-width: 400px) {
   .inputBox {
     width: calc(100% - 40px);
