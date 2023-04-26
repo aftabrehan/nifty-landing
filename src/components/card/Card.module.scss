@@ -13,7 +13,9 @@
   height: 768px;
 
   img {
-    border-radius: 12px;
+    background-color: $veryLightGray;
+    border-radius: 16px;
+    filter: contrast(130%);
   }
 }
 
@@ -30,7 +32,7 @@
     line-height: 25px;
     letter-spacing: 0.2px;
     color: $darkNavyBlue;
-    width: 75%;
+    width: 70%;
   }
 }
 
