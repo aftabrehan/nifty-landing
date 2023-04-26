@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import Intro from 'components/sections/intro'
-import Card from 'components/card'
+import Slider from 'components/slider'
 import Feature from 'components/sections/feature'
 import Countbox from 'components/countbox'
 import CTA from 'components/cta'
@@ -44,7 +44,7 @@ const Home = () => {
       </Head>
       <Header />
       <Intro />
-      <Card />
+      <Slider />
       <Feature />
       <Feature
         title={
