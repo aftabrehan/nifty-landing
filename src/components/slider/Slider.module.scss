@@ -1,0 +1,97 @@
+@import 'styles/common';
+
+.wrapper {
+  @extend .flexCenterCol;
+  width: 100%;
+  overflow: hidden;
+
+  h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.2px;
+    color: $darkNavyBlue;
+  }
+
+  &.dark h2 {
+    color: $white;
+  }
+}
+
+.container {
+  height: 920px;
+  width: 100vw;
+  position: relative;
+  padding: 20px;
+}
+
+.swipeBtns {
+  @extend .clearStyles, .flexCenter;
+  position: absolute;
+  top: 35%;
+  height: 80px;
+  width: 80px;
+  background-color: $tHalfWhite;
+  backdrop-filter: blur(18px);
+  border-radius: 50%;
+  box-shadow: 0 0 12px $lightBlueGray;
+  cursor: pointer;
+  z-index: 1;
+  transition: scale 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+    backdrop-filter: blur(8px);
+  }
+
+  &:active {
+    scale: 1.05;
+    opacity: 0.75;
+  }
+
+  &:first-of-type {
+    transform: rotate(180deg);
+    left: 3.25rem;
+  }
+
+  &:last-of-type {
+    right: 3.25rem;
+  }
+}
+
+.slider {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.card {
+  height: 90%;
+  margin: auto 10px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .card {
+    width: calc(2.5% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .card {
+    width: calc(3.3333333% - 20px);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    width: calc(5% - 20px);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .card {
+    width: calc(10% - 20px);
+  }
+}
