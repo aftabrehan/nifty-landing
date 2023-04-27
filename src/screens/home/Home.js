@@ -44,7 +44,7 @@ const Home = () => {
       </Head>
       <Header />
       <Intro />
-      <Slider />
+      <Slider type="large" />
       <Feature />
       <Feature
         title={
@@ -59,6 +59,7 @@ const Home = () => {
         showKeyPoints
         swap
       />
+      <Slider />
       <Countbox />
       <CTA />
       <EthRow />

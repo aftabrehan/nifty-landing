@@ -40,7 +40,6 @@
 .time {
   @extend .flexCenter;
   gap: 1rem;
-  padding: 0 1rem;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -57,7 +56,6 @@
   @extend .spaceBetween;
   gap: 1rem;
   width: 100%;
-  padding: 0 1rem;
 }
 
 .peoples {

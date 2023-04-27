@@ -4,7 +4,7 @@
   @extend .flexCenterCol;
   width: 100%;
   overflow: hidden;
-  padding: 2rem 0;
+  margin: 3rem auto;
 
   h2 {
     font-family: 'Sora', sans-serif;
@@ -21,8 +21,7 @@
 }
 
 .container {
-  height: 920px;
-  width: 100vw;
+  width: 100%;
   position: relative;
   padding: 20px;
 }
@@ -62,6 +61,7 @@
 }
 
 .slider {
+  margin: 2rem 0;
   display: flex;
   width: 1000%;
   height: 100%;
@@ -71,6 +71,23 @@
 .card {
   height: 90%;
   margin: auto 10px;
+}
+
+.category {
+  @extend .flexCenter;
+  gap: 1rem;
+  margin: 2rem 0 0;
+
+  button {
+    &.active {
+      color: $primaryBlue;
+      border-color: $primaryBlue;
+    }
+  }
+}
+
+.medium {
+  width: 85vw;
 }
 
 @media only screen and (min-width: 1100px) {
