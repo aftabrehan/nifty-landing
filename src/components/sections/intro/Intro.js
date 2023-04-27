@@ -44,13 +44,6 @@ const Intro = () => {
       </motion.div>
       <motion.div
         {...motionProps}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className={stl.width100}
-      >
-        <SearchBar />
-      </motion.div>
-      <motion.div
-        {...motionProps}
         transition={{ duration: 0.5, delay: 0.35 }}
         className={stl.companiesLogos}
       >
@@ -58,6 +51,13 @@ const Intro = () => {
         <NikeLogo />
         <AdidasLogo />
         <NewHollandLogo />
+      </motion.div>
+      <motion.div
+        {...motionProps}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className={stl.width100}
+      >
+        <SearchBar />
       </motion.div>
     </div>
   )

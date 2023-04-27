@@ -22,7 +22,6 @@
   @extend .spaceBetween;
   gap: 1rem;
   width: 100%;
-  padding: 0 1rem;
 
   h5 {
     font-family: 'Sora', sans-serif;
@@ -32,6 +31,9 @@
     letter-spacing: 0.2px;
     color: $darkNavyBlue;
     width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 

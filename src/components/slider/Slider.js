@@ -14,7 +14,6 @@ const Slider = ({ slideLength = 10, size = 'medium', customClass }) => {
 
   const [currentPosition, setCurrentPosition] = useState(0)
   const [slidesPerPage, setSlidesPerPage] = useState(4)
-  const [containerWidth, setContainerWidth] = useState(0)
 
   const slidesCount = slideLength - slidesPerPage
   const currentMargin = -currentPosition * (100 / slidesPerPage)
@@ -22,14 +21,13 @@ const Slider = ({ slideLength = 10, size = 'medium', customClass }) => {
   const containerRef = useRef(null)
 
   useEffect(() => {
-    const handleResize = () => {
-      setContainerWidth(containerRef.current.offsetWidth)
-      setParams(containerWidth)
-    }
+    const handleResize = () => setParams(containerRef.current.offsetWidth)
+
+    handleResize()
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [containerWidth])
+  }, [])
 
   const setParams = w => {
     if (w < 551) setSlidesPerPage(1)
