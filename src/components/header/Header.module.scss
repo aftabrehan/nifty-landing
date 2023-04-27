@@ -30,6 +30,8 @@
   }
 
   @media (max-width: 645px) {
+    padding: 1rem;
+
     .navBtns button:not(:last-of-type) {
       display: none;
     }

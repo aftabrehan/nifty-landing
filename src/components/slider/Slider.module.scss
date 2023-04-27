@@ -4,6 +4,7 @@
   @extend .flexCenterCol;
   width: 100%;
   overflow: hidden;
+  padding: 2rem 0;
 
   h2 {
     font-family: 'Sora', sans-serif;
@@ -93,5 +94,10 @@
 @media only screen and (max-width: 550px) {
   .card {
     width: calc(10% - 20px);
+  }
+
+  .swipeBtns {
+    height: 50px;
+    width: 50px;
   }
 }
