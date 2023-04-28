@@ -7,6 +7,7 @@ import Footer from 'components/footer'
 import Intro from 'components/sections/intro'
 import Slider from 'components/slider'
 import Feature from 'components/sections/feature'
+import GetStarted from 'components/sections/get-started'
 import Countbox from 'components/countbox'
 import CTA from 'components/cta'
 import EthRow from 'components/eth-row'
@@ -46,6 +47,7 @@ const Home = () => {
       <Intro />
       <Slider type="large" />
       <Feature />
+      <GetStarted />
       <Feature
         title={
           <>

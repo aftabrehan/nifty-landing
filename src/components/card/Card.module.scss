@@ -4,37 +4,65 @@
   @extend .flexColStart;
   gap: 1rem;
   background: transparent;
-}
-
-.medium {
   width: 468px;
-  background: transparent;
   height: 768px;
+  background: transparent;
 
   img {
-    background-color: $veryLightGray;
     border-radius: 16px;
+    background-color: $veryLightGray;
     filter: contrast(130%);
   }
 }
 
-.info {
+.title {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  color: $darkNavyBlue;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content {
+  @extend .spaceBetween;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.mini {
+  gap: 0.25rem;
+
+  & > img {
+    border-radius: 0;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .time > span {
+    display: none;
+  }
+
+  .peoples span {
+    display: none;
+  }
+
+  .badge {
+    max-width: 88px;
+  }
+}
+
+.timeBox {
   @extend .spaceBetween;
   gap: 1rem;
   width: 100%;
-
-  h5 {
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 0.2px;
-    color: $darkNavyBlue;
-    width: 70%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
 }
 
 .time {
@@ -81,7 +109,7 @@
 
 .iconBtn {
   @extend .clearStyles, .flexCenter;
-  width: 28px;
+  max-width: 28px;
   height: 34px;
   border-radius: 4px;
   cursor: pointer;
@@ -97,13 +125,34 @@
   }
 }
 
-.dark {
-  .time svg path {
-    fill: $secondaryGray;
+.tile {
+  @extend .mini;
+  flex-direction: row !important;
+  gap: 1rem !important;
+  width: 100% !important;
+  height: unset;
+  padding: 1rem;
+  margin: 0;
+  border: unset !important;
+
+  img {
+    width: 30%;
+    height: 100%;
+    border-radius: 12px;
   }
 
-  .info h5 {
+  .content {
+    width: 70%;
+  }
+}
+
+.dark {
+  .title {
     color: $white;
+  }
+
+  .time svg path {
+    fill: $secondaryGray;
   }
 
   .divider {
