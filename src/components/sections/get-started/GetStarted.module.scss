@@ -13,10 +13,10 @@
   @extend .spaceBetween;
   flex-direction: column;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
   width: calc(33% - 1rem);
   max-width: 468px;
-  height: 1010px;
+  height: 824px;
   border: 1px solid $veryLightGray;
   border-radius: 12px;
 
@@ -46,6 +46,10 @@
   height: 100%;
   overflow-y: auto;
 
+  > div {
+    margin: 0;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -54,6 +58,10 @@
 .textBox {
   @extend .flexCenterCol;
   gap: 1rem;
+}
+
+.slider > div > div {
+  margin: 0;
 }
 
 .dark {

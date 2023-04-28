@@ -18,7 +18,7 @@ const GetStarted = () => {
         <h2>Check out the hottest Sale offers</h2>
 
         <div className={stl.content}>
-          <Slider type="mini" />
+          <Slider customClass={stl.slider} type="mini" />
         </div>
 
         <Button label="Show me More" variant="secondary" />
