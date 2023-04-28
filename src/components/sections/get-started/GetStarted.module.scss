@@ -1,0 +1,48 @@
+@import 'styles/common';
+
+.container {
+  @extend .spaceBetween;
+  width: 100%;
+  max-width: 1400px;
+  padding: 1rem;
+  margin: 3rem auto;
+}
+
+.card {
+  @extend .spaceBetween;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  width: calc(33% - 2rem - 1rem);
+  height: 768px;
+  border: 1px solid $veryLightGray;
+  border-radius: 12px;
+
+  &.black {
+    background-color: $darkNavyBlue;
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: $darkNavyBlue;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.textBox {
+  @extend .flexCenterCol;
+  gap: 1rem;
+}
