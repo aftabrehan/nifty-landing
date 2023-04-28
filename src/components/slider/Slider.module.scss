@@ -90,7 +90,7 @@
 
 .mini {
   .card {
-    translate: 0 -48px;
+    translate: 0 -64px;
     width: calc(10% - 20px);
   }
 
@@ -105,6 +105,18 @@
   .swipeBtns {
     width: 40px;
     height: 40px;
+  }
+
+  @media (max-width: 450px) {
+    .swipeBtns {
+      &:first-of-type {
+        left: 0.75rem;
+      }
+
+      &:last-of-type {
+        right: 0.75rem;
+      }
+    }
   }
 }
 

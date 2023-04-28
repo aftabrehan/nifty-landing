@@ -77,7 +77,7 @@ const Card = ({ size = 'medium', customClass }) => {
 }
 
 Card.propTypes = {
-  size: PropTypes.oneOf(['mini', 'medium']),
+  size: PropTypes.oneOf(['mini', 'medium', 'large']),
   customClass: PropTypes.string,
 }
 
