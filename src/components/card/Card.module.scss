@@ -6,6 +6,19 @@
   background: transparent;
 }
 
+.title {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  color: $darkNavyBlue;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .medium {
   width: 468px;
   background: transparent;
@@ -18,23 +31,31 @@
   }
 }
 
-.info {
+.mini {
+  gap: 0.25rem;
+  margin: 0.5rem !important;
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .time > span > span {
+    display: none;
+  }
+
+  .peoples span {
+    display: none;
+  }
+
+  .badge {
+    max-width: 88px;
+  }
+}
+
+.timeBox {
   @extend .spaceBetween;
   gap: 1rem;
   width: 100%;
-
-  h5 {
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 0.2px;
-    color: $darkNavyBlue;
-    width: 70%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
 }
 
 .time {
@@ -81,7 +102,7 @@
 
 .iconBtn {
   @extend .clearStyles, .flexCenter;
-  width: 28px;
+  max-width: 28px;
   height: 34px;
   border-radius: 4px;
   cursor: pointer;
@@ -98,12 +119,12 @@
 }
 
 .dark {
-  .time svg path {
-    fill: $secondaryGray;
+  .title {
+    color: $white;
   }
 
-  .info h5 {
-    color: $white;
+  .time svg path {
+    fill: $secondaryGray;
   }
 
   .divider {

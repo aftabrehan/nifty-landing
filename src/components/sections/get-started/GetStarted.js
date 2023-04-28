@@ -2,10 +2,11 @@ import Image from 'next/image'
 import { useSelector } from 'react-redux'
 import clsx from 'clsx'
 
+import Para from 'components/para'
 import Button from 'components/button'
+import Slider from 'components/slider'
 
 import stl from './GetStarted.module.scss'
-import Para from 'components/para'
 
 const GetStarted = () => {
   const { isDark } = useSelector(state => state.appearance)
@@ -15,7 +16,9 @@ const GetStarted = () => {
       <div className={stl.card}>
         <h2>Check out the hottest Sale offers</h2>
 
-        <div className={stl.content}></div>
+        <div className={stl.content}>
+          <Slider type="mini" />
+        </div>
 
         <Button label="Show me More" variant="secondary" />
       </div>

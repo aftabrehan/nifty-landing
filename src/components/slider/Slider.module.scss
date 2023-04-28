@@ -78,16 +78,34 @@
   gap: 1rem;
   margin: 2rem 0 0;
 
-  button {
-    &.active {
-      color: $primaryBlue;
-      border-color: $primaryBlue;
-    }
+  button.active {
+    color: $primaryBlue;
+    border-color: $primaryBlue;
   }
 }
 
 .medium {
   width: 85vw;
+}
+
+.mini {
+  .card {
+    translate: 0 -48px;
+    width: calc(10% - 20px);
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .swipeBtns {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media only screen and (min-width: 1100px) {

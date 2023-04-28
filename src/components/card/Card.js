@@ -47,14 +47,15 @@ const Card = ({ size = 'medium', customClass }) => {
         height={600}
       />
 
-      <div className={stl.info}>
-        <h5>{title}</h5>
-        <Badge>{(eth / 1000000).toFixed(2)} ETH</Badge>
-      </div>
+      <h5 className={stl.title}>{title}</h5>
 
-      <div className={stl.time}>
-        <ClockIcon />
-        {time} min left
+      <div className={stl.timeBox}>
+        <span className={stl.time}>
+          <ClockIcon />
+          <span>{time} min left</span>
+        </span>
+
+        <Badge customClass={stl.badge}>{(eth / 1000000).toFixed(2)} ETH</Badge>
       </div>
 
       <div className={stl.divider} />
@@ -76,7 +77,7 @@ const Card = ({ size = 'medium', customClass }) => {
 }
 
 Card.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium']),
+  size: PropTypes.oneOf(['mini', 'medium']),
   customClass: PropTypes.string,
 }
 

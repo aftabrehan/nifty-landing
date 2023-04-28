@@ -79,7 +79,7 @@ const Slider = ({ slideLength = 10, type = 'medium', customClass }) => {
 
         <div className={stl.slider} style={{ marginLeft: `${currentMargin}%` }}>
           {Array.from({ length: slideLength }).map((_, i) => (
-            <Card key={i} customClass={stl.card} />
+            <Card key={i} customClass={stl.card} size={type} />
           ))}
         </div>
 
@@ -95,7 +95,7 @@ const Slider = ({ slideLength = 10, type = 'medium', customClass }) => {
 
 Slider.propTypes = {
   slideLength: PropTypes.number,
-  type: PropTypes.oneOf(['medium', 'large']),
+  type: PropTypes.oneOf(['mini', 'medium', 'large']),
   customClass: PropTypes.string,
 }
 
