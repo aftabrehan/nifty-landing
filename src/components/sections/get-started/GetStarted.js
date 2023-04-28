@@ -1,20 +1,27 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import { useSelector } from 'react-redux'
 import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 import Para from 'components/para'
 import Button from 'components/button'
 import Slider from 'components/slider'
 import Card from 'components/card'
 
+import { getCommonMotionProps } from 'lib/utils'
+
 import stl from './GetStarted.module.scss'
 
 const GetStarted = () => {
   const { isDark } = useSelector(state => state.appearance)
+  const [animation, setAnimation] = useState(false)
+
+  const motionProps = getCommonMotionProps(animation, setAnimation)
 
   return (
     <div className={clsx(stl.container, isDark && stl.dark)}>
-      <div className={stl.card}>
+      <motion.div {...motionProps} className={stl.card}>
         <h2>Check out the hottest Sale offers</h2>
 
         <div className={stl.content}>
@@ -22,9 +29,13 @@ const GetStarted = () => {
         </div>
 
         <Button label="Show me More" variant="secondary" />
-      </div>
+      </motion.div>
 
-      <div className={clsx(stl.card, stl.black)}>
+      <motion.div
+        {...motionProps}
+        transition={{ duration: 0.5, delay: 0.15 }}
+        className={clsx(stl.card, stl.black)}
+      >
         <Image src="/assets/png/hand.png" width={468} height={664} />
 
         <div className={stl.textBox}>
@@ -36,9 +47,13 @@ const GetStarted = () => {
         </div>
 
         <Button label="Get Started" />
-      </div>
+      </motion.div>
 
-      <div className={stl.card}>
+      <motion.div
+        {...motionProps}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className={stl.card}
+      >
         <h2>Top NFT at a lower price</h2>
 
         <div className={stl.content}>
@@ -48,7 +63,7 @@ const GetStarted = () => {
         </div>
 
         <Button label="Show me More" variant="secondary" />
-      </div>
+      </motion.div>
     </div>
   )
 }
