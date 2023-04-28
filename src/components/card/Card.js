@@ -14,7 +14,7 @@ import { getRandomNumber, getRandomTime, getRandomPhrase } from 'lib/utils'
 
 import stl from './Card.module.scss'
 
-const Card = ({ size = 'medium', customClass }) => {
+const Card = ({ size = 'medium', type, customClass }) => {
   const { isDark } = useSelector(state => state.appearance)
 
   const [isLiked, setIsLiked] = useState(false)
@@ -35,6 +35,7 @@ const Card = ({ size = 'medium', customClass }) => {
       className={clsx(
         stl.container,
         stl[size],
+        stl[type],
         isDark && stl.dark,
         customClass
       )}
@@ -47,30 +48,34 @@ const Card = ({ size = 'medium', customClass }) => {
         height={600}
       />
 
-      <h5 className={stl.title}>{title}</h5>
+      <div className={stl.content}>
+        <h5 className={stl.title}>{title}</h5>
 
-      <div className={stl.timeBox}>
-        <span className={stl.time}>
-          <ClockIcon />
-          <span>{time} min left</span>
-        </span>
+        <div className={stl.timeBox}>
+          <span className={stl.time}>
+            <ClockIcon />
+            <span>{time} min left</span>
+          </span>
 
-        <Badge customClass={stl.badge}>{(eth / 1000000).toFixed(2)} ETH</Badge>
-      </div>
-
-      <div className={stl.divider} />
-
-      <div className={stl.bidding}>
-        <div className={stl.peoples}>
-          {users.map((src, i) => (
-            <Image key={i} src={src} width={32} height={32} />
-          ))}
-          <span>{peoples} people are bidding</span>
+          <Badge customClass={stl.badge}>
+            {(eth / 1000000).toFixed(2)} ETH
+          </Badge>
         </div>
 
-        <button className={stl.iconBtn} onClick={() => setIsLiked(!isLiked)}>
-          {isLiked ? <HeartRedIcon /> : <HeartOutlineIcon />}
-        </button>
+        <div className={stl.divider} />
+
+        <div className={stl.bidding}>
+          <div className={stl.peoples}>
+            {users.map((src, i) => (
+              <Image key={i} src={src} width={32} height={32} />
+            ))}
+            <span>{peoples} people are bidding</span>
+          </div>
+
+          <button className={stl.iconBtn} onClick={() => setIsLiked(!isLiked)}>
+            {isLiked ? <HeartRedIcon /> : <HeartOutlineIcon />}
+          </button>
+        </div>
       </div>
     </div>
   )
@@ -78,6 +83,7 @@ const Card = ({ size = 'medium', customClass }) => {
 
 Card.propTypes = {
   size: PropTypes.oneOf(['mini', 'medium', 'large']),
+  type: PropTypes.oneOf(['card', 'tile']),
   customClass: PropTypes.string,
 }
 

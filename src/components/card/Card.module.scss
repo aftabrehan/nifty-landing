@@ -4,6 +4,15 @@
   @extend .flexColStart;
   gap: 1rem;
   background: transparent;
+  width: 468px;
+  height: 768px;
+  background: transparent;
+
+  img {
+    border-radius: 16px;
+    background-color: $veryLightGray;
+    filter: contrast(130%);
+  }
 }
 
 .title {
@@ -19,27 +28,25 @@
   overflow: hidden;
 }
 
-.medium {
-  width: 468px;
-  background: transparent;
-  height: 768px;
-
-  img {
-    background-color: $veryLightGray;
-    border-radius: 16px;
-    filter: contrast(130%);
-  }
+.content {
+  @extend .spaceBetween;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .mini {
   gap: 0.25rem;
-  margin: 0.5rem !important;
+
+  & > img {
+    border-radius: 0;
+  }
 
   .title {
     font-size: 0.85rem;
   }
 
-  .time > span > span {
+  .time > span {
     display: none;
   }
 
@@ -115,6 +122,27 @@
     svg path {
       stroke: $red;
     }
+  }
+}
+
+.tile {
+  @extend .mini;
+  flex-direction: row !important;
+  gap: 1rem !important;
+  width: 100% !important;
+  height: unset;
+  padding: 1rem;
+  margin: 0;
+  border: unset !important;
+
+  img {
+    width: 30%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  .content {
+    width: 70%;
   }
 }
 

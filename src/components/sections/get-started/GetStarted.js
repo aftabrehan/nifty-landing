@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import Para from 'components/para'
 import Button from 'components/button'
 import Slider from 'components/slider'
+import Card from 'components/card'
 
 import stl from './GetStarted.module.scss'
 
@@ -40,7 +41,11 @@ const GetStarted = () => {
       <div className={stl.card}>
         <h2>Top NFT at a lower price</h2>
 
-        <div className={stl.content}></div>
+        <div className={stl.content}>
+          {Array.from({ length: 6 }).map((_, i) => (
+            <Card key={i} customClass={stl.card} type="tile" />
+          ))}
+        </div>
 
         <Button label="Show me More" variant="secondary" />
       </div>

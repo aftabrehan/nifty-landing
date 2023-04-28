@@ -13,10 +13,10 @@
   @extend .spaceBetween;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   width: calc(33% - 1rem);
   max-width: 468px;
-  height: 868px;
+  height: 1010px;
   border: 1px solid $veryLightGray;
   border-radius: 12px;
 
@@ -39,9 +39,16 @@
 }
 
 .content {
+  @extend .flexColStart;
+  align-items: center;
+  gap: 1rem;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .textBox {
@@ -66,6 +73,7 @@
 
   .card {
     width: 100%;
+    height: unset;
   }
 }
 
@@ -79,6 +87,5 @@
     height: 720px;
     border-right: unset;
     border-left: unset;
-    padding: 1rem;
   }
 }
