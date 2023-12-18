@@ -1,22 +1,24 @@
-# Designer's Portfolio
+# Nifty Landing 
 
-This is a designer's portfolio project created with custom design. It features various portfolio items and utilizes modern technologies like React JS, Next.js, JavaScript, SendGrid, and Framer motion. The website includes easy navigation, an about page, services page, contact page, and a home page with sections for portfolio, skills, and testimonials. It is designed to be fully responsive and has been tested on iPads and phones. Additionally, it has a contact message feature that utilizes SendGrid's Email API, making it convenient for quick collaborations.
+ 
+I built a user-friendly platform for showcasing and promoting exclusive NFTs. Working alone as the developer, I successfully created and launched the website, incorporating important features like a search bar with dropdown categories, a newsletter sign-up form, and a responsive carousel. It contains both light and dark themes. This project has provided me with valuable experience in dark web design and has allowed me to improve my development skills.
 
-| [View Project 🔥](https://aftabrehan.com/portfolio/designer-portfolio) | [Live Preview 🚀](https://krish4alex.vercel.app) |
-| ---------------------------------------------------------------------- | ------------------------------------------------ |
+| [View Project 🔥](https://aftabrehan.com/portfolio/nft-product) | [Live Preview 🚀](https://nifty-landing.vercel.app) |
+|--------------------------------------------------------------|--------------------------------------------------|
 
 ### Preview
 
 <div>
-  <a href="https://aftabrehan.com/portfolio/designer-portfolio">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/47092178d2cd43ffbac0a89f387f1e6c-with-play.gif">
+  <a href="https://aftabrehan.com/portfolio/nft-product">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/64580d0da0144e4e8428261fd946b61c-with-play.gif">
   </a>
 </div>
 
-|                                                                                                       The                                                                                                       |                                                                                                     Project                                                                                                     |                                                                                                      Shots                                                                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <div><a href="https://aftabrehan.com/portfolio/designer-portfolio"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.847d8c2b.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/designer-portfolio"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.ec4ae129.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/designer-portfolio"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.04c29675.png&w=1920&q=75"></a></div> |
-| <div><a href="https://aftabrehan.com/portfolio/designer-portfolio"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F4.d6b7e1ba.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/designer-portfolio"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.1a8bca17.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/designer-portfolio"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F6.34f9a685.png&w=1920&q=75"></a></div> |
+
+|                                                                                                   The                                                                                                    |                                                                                                 Project                                                                                                  |                                                                                                  Shots                                                                                                   |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <div><a href="https://aftabrehan.com/portfolio/nft-product"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.e9e27ec9.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/nft-product"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.f481d126.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/nft-product"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.e0aadd8f.png&w=1920&q=75"></a></div> |
+| <div><a href="https://aftabrehan.com/portfolio/nft-product"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F4.93745d4e.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/nft-product"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.d05de869.png&w=1920&q=75"></a></div> | <div><a href="https://aftabrehan.com/portfolio/nft-product"><img style="max-width:220px;" src="https://aftabrehan.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F6.5a5a54fb.png&w=1920&q=75"></a></div> |
 
 <hr />
 
@@ -25,7 +27,7 @@ This is a designer's portfolio project created with custom design. It features v
 1. Clone the repository.
 
 ```
-git clone https://github.com/aftabrehan/krish4alex
+git clone https://github.com/aftabrehan/nifty-landing
 ```
 
 2. Install the required dependencies.
@@ -34,8 +36,15 @@ git clone https://github.com/aftabrehan/krish4alex
 yarn
 ```
 
+
 3. Start the development server.
 
 ```
 yarn dev
 ```
+
+
+
+
+> [!NOTE]
+> This project is created solely for portfolio purposes, and you are free to use it as you see fit.
