@@ -27,7 +27,7 @@ I built a user-friendly platform for showcasing and promoting exclusive NFTs. Wo
 1. Clone the repository.
 
 ```
-git clone https://github.com/aftabrehan/nifty-landing
+git clone https://github.com/aftabrehan/nifty-landing.git
 ```
 
 2. Install the required dependencies.
